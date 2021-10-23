@@ -1,0 +1,13 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: lightgrey;
+  font-size: 25px;
+}
+
+.NavBar-total {
+  font-size: 15px;
+}
+
