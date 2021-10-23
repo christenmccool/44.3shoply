@@ -1,6 +1,6 @@
 .Product {
   width: 400px;
-  height: 425px;
+  height: 250px;
   border: 1px solid grey;
   margin: 0;
   border-radius: 3px;
@@ -8,13 +8,18 @@
   position: relative;
 }
 
-.Product-img {
-  height: 200px;
-  max-width: 300px;
+.Product-name {
+  margin: 10px;
 }
 
-.Product-p {
-  margin: 0 20px;
+.Product-img {
+  height: 100px;
+  max-width: 200px;
+}
+
+.Product-price {
+  font-weight: normal;
+  margin: 10px;
 }
 
 .Product-icon-div {

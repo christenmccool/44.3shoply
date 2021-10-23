@@ -18,12 +18,18 @@ const Product = ({id, name, price, description, image_url}) => {
     dispatch(remove(id));
   }
 
+  const capitalizeName = (str) => {
+    const wordArr = str.split(" ");
+    const charArrs = wordArr.map(word => [...word].map((char,i) => i===0 ? char.toUpperCase() : char));
+    const newWordArr = charArrs.map(arr => arr.join(""));
+    return newWordArr.join(" ");
+  }
+
   return (
     <div className="Product">
-      <h1 className="Product-h1">{name}</h1>
+      <h1 className="Product-name">{capitalizeName(name)}</h1>
       <img className="Product-img" src={image_url} alt={name} />
-      <p className="Product-p">{description}</p>
-      <h2 className="Product-h2">{`$${price}`}</h2>
+      <h2 className="Product-price">{`$${price}`}</h2>
       <div className="Product-icon-div">
         {cartItems[id] ? 
           <div className="Product-qty">
